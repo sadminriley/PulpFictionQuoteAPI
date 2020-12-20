@@ -25,6 +25,14 @@ class PulpResource(Resource):
         return jsonify(result)
 
 
+class Health(PulpResource):
+    '''
+    [GET] / - Returns 200 for health check because AWS is a pain in my ass
+    '''
+    def get(self):
+        return 'Healthy!'
+
+
 class Characters(PulpResource):
     '''
     [GET] Character - Pulp Fiction Movie Characters
@@ -60,6 +68,7 @@ class Quote(PulpResource):
 
 
 # Routing
+pulpapi.add_resource(Health, '/')
 pulpapi.add_resource(Characters, '/characters')
 pulpapi.add_resource(Quote, '/quote/<name>')
 
