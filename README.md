@@ -1,5 +1,11 @@
 # Pulp Fiction Quote Generator API
 
+I've also wrote a tutorial below for this repo. I may cover other deployment methods later.
+
+# How run and deploy a Flask API to AWS EKS
+
+https://fasterdevops.github.io/flask-docker-eks/
+
 
 ## Building the application
 ```
