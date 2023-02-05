@@ -4,6 +4,8 @@ from flask import Flask, jsonify, request
 from json import dumps
 from flask_restful import Resource, Api
 import sqlalchemy
+from jinja2.utils import markupsafe
+from markupsafe import Markup
 
 
 app = Flask(__name__)
