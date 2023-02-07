@@ -1,3 +1,11 @@
+# Deployment and config files
+
+This directory contains the kubernetes files used in the EKS, Flask, Docker tutorial found here https://fasterdevops.github.io/flask-docker-eks/
+
+
+Note: You will have to change the image url in the deployment.yaml
+
+
 # Install with a Helm chart
 Install the helm chart by running the follow command in the chart folder-
 ```
@@ -36,10 +44,3 @@ nginx-76d6c9b8c-dqfqr      1/1     Running   2 (6h20m ago)   2d19h
 pulpapi-5c545cfb49-6klfx   1/1     Running   0               4h48m
 ```
 
-
-# Deployment and config files
-
-This directory contains the kubernetes files used in the EKS, Flask, Docker tutorial found here https://fasterdevops.github.io/flask-docker-eks/
-
-
-Note: You will have to change the image url in the deployment.yaml

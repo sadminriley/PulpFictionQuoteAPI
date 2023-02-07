@@ -1,6 +1,8 @@
 # Pulp Fiction Quote Generator API
 
-I've also wrote a tutorial below for this repo. I may cover other deployment methods later.
+I've also wrote a tutorial below for this repo.
+
+I've included a packaged Helm(v3) chart.
 
 # How run and deploy a Flask API to AWS EKS
 
