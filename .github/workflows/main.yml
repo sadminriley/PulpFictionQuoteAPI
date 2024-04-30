@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.11.4
@@ -22,7 +22,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi #pytests could go under this step
   docker:
         needs: build
-        runs-on: self-hosted
+        runs-on: ubuntu-latest
         steps:
           -
             name: Checkout
@@ -48,12 +48,12 @@ jobs:
               tags: sadminriley/images:app-${{ github.run_number }}
   modifygit:
     needs: docker
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         name: changing the deployment of git repo
         with:
-          repository: 'sadminriley/App-Manifest-'
+          repository: 'sadminriley/argocd-flask'
           token: ${{ secrets.GIT_PASSWORD }}
       - name: modify the image
         run: |
